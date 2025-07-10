@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Take a chance...</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+  <style>body {
+    font-family: Ubuntu, sans-serif;
+  }
+  h1 {
+    font-family: Lora, serif;
+  }
+  .dice-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+.dice-container li {
+        margin: 10px; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .result {
+      /* display: inline; */ /* This can cause layout issues with flex-direction: column */
+      margin-top: 5px; /* Space between button and result */
+      font-size: 1.2em; /* Make result more prominent */
+    }
+  .roll {
+    background-color: #1b8e2d; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .roll:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>...Roll The Dice!</h1>
+  <ul class="dice-container">
+    <li><button class="roll" onclick="rollDice(20)">D20</button>
+      <div class="result" id="resultD20"></div>
+    </li>
+
+    <li><button class="roll" onclick="rollDice(12)">D12</button>
+      <div class="result" id="resultD12"></div>
+    </li>
+
+    <li><button class="roll" onclick="rollDice(10)">D10</button>
+      <div class="result" id="resultD10"></div>
+    </li>
+
+    <li><button class="roll" onclick="rollDice(8)">D8</button>
+      <div class="result" id="resultD8"></div>
+    </li>
+
+    <li><button class="roll" onclick="rollDice(6)">D6</button>
+      <div class="result" id="resultD6"></div>
+    </li>
+
+    <li><button class="roll" onclick="rollDice(4)">D4</button>
+      <div class="result" id="resultD4"></div>
+    </li>
+
+    <li><button class="roll" onclick="rollDice(100)">D100</button>
+      <div class="result" id="resultD100"></div>
+    </li>
+
+    <li><button class="roll" onclick="dualityDice()">DH</button>
+      <div class="result" id="dualityDiceResult"></div>
+    </li>
+  </ul>
+
+  <script>
+    function rollDice(numSides) {
+      const randomNumber = Math.floor(Math.random() * numSides) + 1;
+      const resultElement = document.getElementById(`resultD${numSides}`);
+    
+      resultElement.innerText = `${randomNumber}!`;
+    
+      if (randomNumber === numSides) {
+        resultElement.style.color = "#1b8e2d"; //green
+      } else if (randomNumber === 1) {
+        resultElement.style.color = "#C51200"; //Red
+      } else {
+        resultElement.style.color = "#000000"; //black
+      }
+    }
+    function dualityDice()
+    {
+      const Hope = Math.floor(Math.random() * 12) + 1;
+      const Fear = Math.floor(Math.random() * 12) + 1;
+      const resultElementDD = document.getElementById(`dualityDiceResult`);
+
+      resultElementDD.innerText = `Hope: ${Hope}, Fear: ${Fear}!`;
+      
+      if (Fear > Hope) {
+  
+        resultElementDD.style.color = "#C51200"; //red
+  
+      } 
+      else if (Hope > Fear){
+  
+        resultElementDD.style.color = "#D19900"; //gold
+  
+      }
+      else {
+  
+        resultElementDD.style.color = "#1b8e2d"; //green
+      
+      }
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Take a chance...</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <h1>...Roll The Dice!</h1>
+  <div class="dice-container">
+    <button class="roll" onclick="rollDice(20)">D20</button>
+    <div class="result" id="resultD20"></div><br>
+
+    <button class="roll" onclick="rollDice(12)">D12</button>
+    <div class="result" id="resultD12"></div><br>
+
+    <button class="roll" onclick="rollDice(10)">D10</button>
+    <div id="resultD10" class="result"></div><br>
+
+    <button class="roll" onclick="rollDice(8)">D8</button>
+    <div id="resultD8" class="result"></div><br>
+
+    <button class="roll" onclick="rollDice(6)">D6</button>
+    <div class="result" id="resultD6"></div><br>
+
+    <button class="roll" onclick="rollDice(4)">D4</button>
+    <div class="result" id="resultD4"></div><br>
+
+    <button class="roll" onclick="rollDice(100)">D100</button>
+    <div class="result" id="resultD100"></div><br>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
