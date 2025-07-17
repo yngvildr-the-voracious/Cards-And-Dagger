@@ -25,4 +25,32 @@ function rollDice(numSides) {
       resultElement.style.color = "#000000";
     }
   }
+      function dualityDice()
+    {
+      const Hope = Math.floor(Math.random() * 12) + 1;
+      const Fear = Math.floor(Math.random() * 12) + 1;
+      const resultElementDD = document.getElementById(`dualityDiceResult`);
+
+      resultElementDD.innerText = `Hope: ${Hope}, Fear: ${Fear}!`;
+      
+      if (Fear > Hope) {
+  
+        resultElementDD.style.color = "#C51200"; //red
+  
+      } 
+      else if (Hope > Fear){
+  
+        resultElementDD.style.color = "#D19900"; //gold
+  
+      }
+      else {
+  
+        resultElementDD.style.color = "#1b8e2d"; //green
+      
+      }
+    }
+    </script>
+</body>
+
+</html>
   
