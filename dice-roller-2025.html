@@ -25,10 +25,8 @@
     }
 
     .result {
-      /* display: inline; */ /* This can cause layout issues with flex-direction: column */
-      margin-top: 5px; /* Space between button and result */
-      font-size: 1.2em; /* Make result more prominent */
-    }
+      margin-top: 5px;
+      font-size: 1.2em;}
   .roll {
     background-color: #1b8e2d; /* Green */
     border: none;
@@ -85,6 +83,14 @@
   </ul>
 
   <script>
+
+  // Colors
+  const SUCCESS_ROLL = "#1B8E2D";
+  const FUMBLE_ROLL = "#C51200" ;
+  const NEUTRAL_ROLL = "#000000";
+  const withHope = "#D19900" ;
+  const withFear = "#E3E3E3" ;
+
     function rollDice(numSides) {
       const randomNumber = Math.floor(Math.random() * numSides) + 1;
       const resultElement = document.getElementById(`resultD${numSides}`);
@@ -92,27 +98,28 @@
       resultElement.innerText = `${randomNumber}!`;
     
       if (randomNumber === numSides) {
-        resultElement.style.color = "#1b8e2d"; //green
+        resultElement.style.color = SUCCESS_ROLL; //green
       } else if (randomNumber === 1) {
-        resultElement.style.color = "#C51200"; //Red
+        resultElement.style.color = FUMBLE_ROLL; //Red
       } else {
-        resultElement.style.color = "#000000"; //black
+        resultElement.style.color = NEUTRAL_ROLL; //black
       }
     }
     function dualityDice()
     {
-      const Hope = Math.floor(Math.random() * 12) + 1;
-      const Fear = Math.floor(Math.random() * 12) + 1;
+      const hopeDie = Math.floor(Math.random() * 12) + 1;
+      const fearDieDie = Math.floor(Math.random() * 12) + 1;
+      const ddResult = hopeDie + fearDie;
       const resultElementDD = document.getElementById(`dualityDiceResult`);
 
-      resultElementDD.innerText = `Hope: ${Hope}, Fear: ${Fear}!`;
+      resultElementDD.innerText = "It's a" ${ddResult} "! (Hope: "${hopeDie}",  Fear: "${fearDie});
       
-      if (Fear > Hope) {
+      if (fearDie > hopeDie) {
   
         resultElementDD.style.color = "#C51200"; //red
   
       } 
-      else if (Hope > Fear){
+      else if (hopeDie > fearDie){
   
         resultElementDD.style.color = "#D19900"; //gold
   
