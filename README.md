@@ -4,7 +4,7 @@ When I was a child in the late Early 2000's, my father came to my room with half
 
 Then he opened a book. I don't remember the name. It was battered and broken. It had "HTML" and probably "Web Technologies" on it.
 
-We didn't have Internet at home yet, but I had heard of it. Our parents and teachers had already murmured that 9/11 was on every lips thanks to it, and my sister, who emigrated to the US rather than Europe, had already sent a few pictures of my cousins via emails that my grandmother had proudly gotten professionnally printed and framed in her little appartment so they would always be by her side. 
+We didn't have Internet at home yet, but I had heard of it. Our parents and teachers had already murmured that 9/11 was on every lips thanks to it, and my father's sister, who emigrated to the US rather than Europe, had already sent a few pictures of my cousins via emails that my grandmother had proudly gotten professionnally printed and framed in her little appartment so they would always be by her side. 
 
 More than 25 years later, 4 years after my father's death, 3 years after I gave birth to my own child, I want to be the one to teach them. Not out of a book that will put them off, but with my own work, my sweat and tears, so I can say "it's not just your daddy and people who look like him who can do it".
 
